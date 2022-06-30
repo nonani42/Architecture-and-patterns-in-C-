@@ -1,0 +1,15 @@
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\bin\Debug\net6.0\Architecture and patterns in CSharp.exe
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\bin\Debug\net6.0\Architecture and patterns in CSharp.deps.json
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\bin\Debug\net6.0\Architecture and patterns in CSharp.runtimeconfig.json
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\bin\Debug\net6.0\Architecture and patterns in CSharp.dll
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\bin\Debug\net6.0\Architecture and patterns in CSharp.pdb
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.csproj.AssemblyReference.cache
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.AssemblyInfoInputs.cache
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.AssemblyInfo.cs
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.csproj.CoreCompileInputs.cache
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.dll
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\refint\Architecture and patterns in CSharp.dll
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.pdb
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\Architecture and patterns in CSharp.genruntimeconfig.cache
+C:\Users\42non\source\repos\Architecture and patterns in CSharp\Homework_01\Architecture and patterns in CSharp\obj\Debug\net6.0\ref\Architecture and patterns in CSharp.dll
