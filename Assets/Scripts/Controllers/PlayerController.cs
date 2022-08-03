@@ -10,6 +10,7 @@ namespace Asteroids
         Transform _transform;
         Transform _weaponPoint;
         Rigidbody _rigidbody;
+        Health _health;
         Movement _move;
         Shooting _shoot;
         IWeapon _weapon;
@@ -21,19 +22,29 @@ namespace Asteroids
         Vector3 _screenBottomRight;
 
         float _speed;
+        float _maxHealth;
 
-        public PlayerController(PlayerView player)
+
+        string _inputVert = "Vertical";
+        string _inputHorizont = "Horizontal";
+        string _mainFire = "Fire1";
+        KeyCode _changeWeapon = KeyCode.G;
+
+
+
+        public PlayerController(PlayerView player, IViewPools viewPools)
         {
             _player = player;
-            _rigidbody = _player.Rigidbody;
+            _rigidbody = _player.Rigidbody ? _player.Rigidbody : _player.gameObject.AddComponent<Rigidbody>();
             _transform = _player.Transform;
             _weaponPoint = _player.WeaponPoint;
-            _speed = _player.Speed;
+            _speed = 1f;
+            _maxHealth = 10f;
 
-            _weapon = new SimpleGun();
-
+            _weapon = new SimpleGun(viewPools);
             _move = new Movement(_rigidbody);
             _shoot = new Shooting(_weapon);
+            _health = new Health(_maxHealth, _maxHealth);
 
 
             _screenTopLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, Camera.main.pixelHeight, 10f));
@@ -44,20 +55,21 @@ namespace Asteroids
 
         public void Update()
         {
-
-            if (_rigidbody)
+            if (!_rigidbody)
             {
-                _move.Clamp(_transform, _screenTopLeft.x, _screenBottomRight.x, _screenBottomRight.y, _screenTopLeft.y);
-                _move.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), _speed);
+                Debug.LogError("No RigidBody!");
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            _move.Move(Input.GetAxis(_inputHorizont), Input.GetAxis(_inputVert), _speed);
+            _move.Clamp(_transform, _screenTopLeft.x, _screenBottomRight.x, _screenBottomRight.y, _screenTopLeft.y);
+
+            if (Input.GetButtonDown(_mainFire))
             {
                 _direction = Vector3.right;
                 _shoot.Fire(_weaponPoint, _direction);
             }
 
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(_changeWeapon))
             {
                 _shoot.ChangeWeapon();
             }

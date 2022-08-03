@@ -6,12 +6,13 @@ namespace Asteroids
 {
     public class SimpleGun : IWeapon
     {
+        IViewPools _viewPools;
+
         GameObject _simpleGunPrefab;
         GameObject _ammo;
         Rigidbody _rigidbody;
 
         float _speed = 7f;
-        float _lifespan = 2f;
 
         public GameObject SimpleGunPrefab
         {
@@ -23,17 +24,21 @@ namespace Asteroids
                 }
                 return _simpleGunPrefab;
             }
-            set => _simpleGunPrefab = value;
         }
+
+        public SimpleGun(IViewPools viewPools)
+        {
+            _viewPools = viewPools;
+        }
+
 
         public void Fire(Transform point, Vector3 direction)
         {
-
-            _ammo = GameObject.Instantiate(SimpleGunPrefab, point);
-            _ammo.transform.parent = null;
+            _ammo = _viewPools.Create(SimpleGunPrefab);
+            _ammo.transform.position = point.position;
             _rigidbody = _ammo.GetComponent<Rigidbody>();
             _rigidbody.AddForce(direction * _speed, ForceMode.Impulse);
-            GameObject.Destroy(_ammo, _lifespan);
+            _viewPools.Destroy(_ammo); //destroys immediately, needs an update to set timer or check for out of view
         }
     }
 }
